@@ -1,4 +1,6 @@
-require('dotenv').config();
+if ((process.env.NODE_ENV || 'development') === 'development') {
+  require('dotenv').config();
+} 
 var express = require('express');
 var router = express.Router();
 var https = require('https');
